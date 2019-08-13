@@ -1,0 +1,61 @@
+{
+    "name": "amber/validator",
+    "description": "Wrapper class for working with arrays.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Deivi Peña",
+            "email": "systemson@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Amber\\Validator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.3.0",
+        "amber/phraser": "^0.0.7@beta",
+        "respect/validation": "^1.1"
+    },
+    "require-dev": {},
+    "scripts": {
+        "test": "phpunit",
+        "docs": "php sami.phar update samiConfig.php -v",
+        "sniff": "phpcs",
+        "fix-cs": "phpcbf",
+        "type-hint": "psalm --show-info=false",
+        "pull": [
+            "git pull",
+            "composer update -vvv"
+        ],
+        "full-check": [
+            "@test",
+            "@docs",
+            "@sniff",
+            "@type-check"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "process-timeout": 0
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
