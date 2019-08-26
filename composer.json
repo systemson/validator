@@ -23,7 +23,7 @@
     },
     "require": {
         "php": ">=7.3.0",
-        "amber/phraser": "^0.0.7@beta",
+        "amber/phraser": "^0.1.0@dev",
         "respect/validation": "^1.1"
     },
     "require-dev": {},

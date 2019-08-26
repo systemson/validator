@@ -234,7 +234,7 @@ class Validator
 
     protected static function explodeNameArgs($validation)
     {
-        return Phraser::explode($validation, ':');
+        return Phraser::make($validation)->explode(':');
     }
 
     protected static function doFalse($subject, string $validation)
