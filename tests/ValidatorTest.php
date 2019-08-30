@@ -164,6 +164,8 @@ class ValidatorTest extends TestCase
         $this->assertSame('double', $this->getType(1.1));
         $this->assertSame('double', $this->getType(7E-10));
         $this->assertSame('class', $this->getType($class));
+        $this->assertSame('bool', $this->getType(true));
+        $this->assertSame('object', $this->getType(new \stdClass()));
 
         /* Test same type */
         $this->assertTrue($this->sameType('first', 'second'));

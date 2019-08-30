@@ -120,6 +120,10 @@ trait ValidatorTrait
             return 'int';
         }
 
+        if ($type == 'boolean') {
+            return 'bool';
+        }
+
         return $type;
     }
 
