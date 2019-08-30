@@ -160,7 +160,7 @@ class ValidatorTest extends TestCase
         /* Test types */
         $this->assertSame('string', $this->getType('string'));
         $this->assertSame('array', $this->getType([]));
-        $this->assertSame('integer', $this->getType(1));
+        $this->assertSame('int', $this->getType(1));
         $this->assertSame('double', $this->getType(1.1));
         $this->assertSame('double', $this->getType(7E-10));
         $this->assertSame('class', $this->getType($class));

@@ -108,7 +108,6 @@ class Validator
         $validator = new v();
 
         foreach ($ruleSet as $attr => $validations) {
-
             if (!isset($values[$attr]) && static::isOptional($validations)) {
                 continue;
             }
@@ -229,7 +228,6 @@ class Validator
         }
 
         return [$name, $messages];
-
     }
 
     protected static function explodeNameArgs($validation)

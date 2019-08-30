@@ -110,10 +110,14 @@ trait ValidatorTrait
      */
     protected function getType($arg)
     {
-        $type = gettype($arg);
-
         if ($this->isClass($arg)) {
             return 'class';
+        }
+
+        $type = gettype($arg);
+
+        if ($type == 'integer') {
+            return 'int';
         }
 
         return $type;
